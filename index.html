@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>kill Referer</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <P id="parm"></P>
+        <button onclick=redirect()>testing</button>
+        <script>
+            var re = getParameter("k")
+            function getParameter( parameterName ){
+
+                var parameters = new URLSearchParams( window.location.search );
+                return parameters.get( parameterName ); // Returns null if the query string is empty or the parameter is not found.
+
+            }
+            document.getElementById("parm").innerHTML = re
+        
+            function redirect(){
+                location.assign(re)
+            }
+        </script>
+    </body>
+</html>
