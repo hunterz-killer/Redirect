@@ -6,8 +6,8 @@
     </head>
     <body>
         <center>
-            <P id="parm"></P>
-            <P id="seco"></P>
+            <h1 id="parm"></h1>
+            <h2 id="seco"></h2>
             <button onclick=redirect()>Click to Redirect</button>
             <script>
                 var re = getParameter("k")
@@ -27,7 +27,6 @@
                     document.getElementById("seco").innerText="This Page will be redirected in "+sec+" Seconds..."
                 }
                 setInterval(dissec,1000)
-
                 setInterval(redirect,4000)
             </script>
         </center>
