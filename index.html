@@ -6,30 +6,30 @@
     </head>
     <body>
         <center>
-        <P id="parm"></P>
-        <P id="seco"></P>
-        <button onclick=redirect()>Click to Redirect</button>
-        <script>
-            var re = getParameter("k")
-            function getParameter( parameterName ){
-                var parameters = new URLSearchParams( window.location.search );
-                return parameters.get( parameterName ); // Returns null if the query string is empty or the parameter is not found.
-            }
-            document.getElementById("parm").innerHTML = re
-        
-            function redirect(){
-                location.assign(re)
-            }
+            <P id="parm"></P>
+            <P id="seco"></P>
+            <button onclick=redirect()>Click to Redirect</button>
+            <script>
+                var re = getParameter("k")
+                function getParameter( parameterName ){
+                    var parameters = new URLSearchParams( window.location.search );
+                    return parameters.get( parameterName ); // Returns null if the query string is empty or the parameter is not found.
+                }
+                document.getElementById("parm").innerHTML = re
+            
+                function redirect(){
+                    location.assign(re)
+                }
 
-            var sec=5;
-            function dissec(){
-                sec -=1;
-                document.getElementById("seco").innerText="This Page will be redirected in "+sec+" Seconds..."
-            }
-            setInterval(dissec,1000)
+                var sec=5;
+                function dissec(){
+                    sec -=1;
+                    document.getElementById("seco").innerText="This Page will be redirected in "+sec+" Seconds..."
+                }
+                setInterval(dissec,1000)
 
-            setInterval(redirect,4000)
-        </script>
+                setInterval(redirect,4000)
+            </script>
         </center>
     </body>
 </html>
