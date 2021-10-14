@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>kill Referer</title>
+        <title>Kill Referer</title>
         <meta charset="UTF-8">
     </head>
     <body>
@@ -10,10 +10,8 @@
         <script>
             var re = getParameter("k")
             function getParameter( parameterName ){
-
                 var parameters = new URLSearchParams( window.location.search );
                 return parameters.get( parameterName ); // Returns null if the query string is empty or the parameter is not found.
-
             }
             document.getElementById("parm").innerHTML = re
         
