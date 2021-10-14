@@ -30,7 +30,7 @@
 
                 var sec=5;
                 function dissec(){
-                    sec -=1;
+                    sec -=1 >= 5;
                     document.getElementById("seco").innerText="This Page will be redirected in "+sec+" Seconds..."
                 }
                 setInterval(dissec,1000)
